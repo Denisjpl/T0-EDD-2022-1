@@ -12,9 +12,10 @@ class Restaurant:
 class Mesas:
 
     def __init__(self):
+        self.id = None
         self.abierta = False
-        self.capacidad = None
         self.capacidad = 0
+        self.asientos_ocupados = 0
         self.asientos = []
 
 class Menu:
@@ -25,7 +26,7 @@ class Menu:
 class Persona:
     
     def __init__(self):
-        pass
+        self.id = None
 
 class Plato:
 
@@ -33,10 +34,9 @@ class Plato:
         self.id = None
         self.price = 0
 
-def inicializar_restaurantes(id, capacidad, lista_mesas):
+def inicializar_restaurantes(id, lista_mesas):
     restaurante = Restaurant()
     restaurante.id = id
-    restaurante.capacidad = capacidad
     restaurante.mesas = lista_mesas
     return restaurante
 
@@ -50,3 +50,8 @@ def inicializar_plato(id, price):
     plato.id = id
     plato.price = price
     return plato
+
+def inicializar_personas(id):
+    persona = Persona()
+    persona.id = id
+    return persona
