@@ -27,6 +27,7 @@ class Persona:
     
     def __init__(self):
         self.id = None
+        self.cuenta = []
 
 class Plato:
 

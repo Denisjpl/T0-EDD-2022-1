@@ -61,22 +61,23 @@ if __name__ == "__main__":
             else:
                 persona = inicializar_personas(input[3])
                 lista_restaurants[int(input[1])].mesas[int(input[2])].asientos[lista_restaurants[int(input[1])].mesas[int(input[2])].asientos_ocupados] = persona
-                lista_restaurants[int(input[1])].mesas[int(input[2])].asientos_ocupados += 1       
+                lista_restaurants[int(input[1])].mesas[int(input[2])].asientos_ocupados += 1  
+
         elif input[0] == "TABLE-STATUS":
             # print(lista_restaurants[int(input[1])].mesas[int(input[2])].capacidad)
             capacidad_total = lista_restaurants[int(input[1])].mesas[int(input[2])].capacidad
             restante = lista_restaurants[int(input[1])].mesas[int(input[2])].capacidad - lista_restaurants[int(input[1])].mesas[int(input[2])].asientos_ocupados
             lista_clientes = lista_restaurants[int(input[1])].mesas[int(input[2])].asientos
             imprimir_status(int(input[1]), int(input[2]), capacidad_total, restante, lista_clientes)
+        
 
+        elif input[0] == "ORDER-CREATE":
+            for i in lista_restaurants[int(input[1])].mesas[int(input[2])].asientos:
+                if i.id == int(input[3]):
+                    
         
         iteracion += 1
             
-
-        
-    # print(lista_restaurants[39].mesas[47].asientos[0].id)             
-    # print(lista_restaurants[39].mesas[47].asientos_ocupados)             
-    # print(lista_restaurants[39].mesas[47].capacidad)             
 
 
 
